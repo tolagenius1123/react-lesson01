@@ -1,4 +1,5 @@
 import Button from "./components/Button";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 				<h1>Welcome to React</h1>
 				<Button />
 			</div>
+			<Footer />
 		</div>
 	);
 }
