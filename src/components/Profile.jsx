@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import ProfilePicture from "../assets/images/portrait.jpg";
 
 const Profile = (prop) => {
@@ -13,4 +13,4 @@ const Profile = (prop) => {
 	);
 };
 
-export default Profile;
+export default Profile;*/

@@ -1,9 +1,11 @@
-import Button from "./components/Button";
+/*import Button from "./components/Button";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import PictureOne from "./assets/images/portrait.jpg";
 import PictureTwo from "./assets/images/lady.jpg";
 import PictureThree from "./assets/images/guy.jpg";
+
 
 function App() {
 	const profileData = [
@@ -44,8 +46,80 @@ function App() {
 					);
 				})}
 			</div>
+			<Footer />
+		</div>
+	);
+}
+
+export default App;*/
+
+
+import PictureFour from "./assets/images/guy.jpg";
+import PictureFive from "./assets/images/ben.jpg";
+import PictureSix from "./assets/images/elon.jpg";
+import PictureSeven from "./assets/images/mark.jpg";
+import Person from "./components/person";
+
+
+function App(){
+	const personData = [
+		{
+			id: 1,
+			name: "Jeff Bezos",
+			image: PictureFour,
+			netWorth: 100,
+			country: "America",
+			residence: "America",
+		},
+		{
+			id: 2,
+			name: "Ben",
+			image: PictureFive,
+			netWorth: 100,
+			country: "America",
+			residence: "America",
+		},
+		{
+			id: 3,
+			name: "Elon Musk",
+			image: PictureSix,
+			netWorth: 100,
+			country: "America",
+			residence: "America",
+		},
+		{
+			id: 3,
+			name: "Mark Zukerberg",
+			image: PictureSeven,
+			netWorth: 100,
+			country: "America",
+			residence: "America",
+		},
+		{
+			id: 3,
+			name: "Larry Elison",
+			image: PictureSeven,
+			netWorth: 100,
+			country: "America",
+			residence: "America",
+		},
+	];
+
+	return (
+		<div className="app">
+			<Navbar />
+			
+			<div className="container">
+				{profileData.map((person) => {
+					return (
+						<Person name={person.name} image={person.image} />
+					);
+				})}
+			</div>
+		
 		</div>
 	);
 }
 
 export default App;
+
