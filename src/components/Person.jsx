@@ -5,14 +5,12 @@ const Person = ({ person }) => {
 			<div className="details">
 				<img
 					src={`${person.image}`}
-					alt="person-portrait"
-					width="100"
-					height="100"
+					alt="person-portrait"	
 				/>
 				<h2>{person.name}</h2>
-				<p>Net Worth:{person.netWorth}</p>
-				<p>Country:{person.country}</p>
-				<p>Residence:{person.residence}</p>
+				<p>Net Worth: {person.netWorth}</p>
+				<p>Country: {person.country}</p>
+				<p>Age: {person.age}</p>
 			</div>
 		</div>
 	);

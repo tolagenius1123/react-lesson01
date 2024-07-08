@@ -4,11 +4,16 @@ import Profile from "./components/Profile";
 import PictureOne from "./assets/images/portrait.jpg";
 import PictureTwo from "./assets/images/lady.jpg";
 import PictureThree from "./assets/images/guy.jpg";
-import PictureFour from "./assets/images/guy.jpg";
-import PictureFive from "./assets/images/ben.jpg";
-import PictureSix from "./assets/images/elon.jpg";
+import PictureFour from "./assets/images/elon.jpg";
+import PictureFive from "./assets/images/jeff.jpg";
+import PictureSix from "./assets/images/ben.jpg";
 import PictureSeven from "./assets/images/mark.jpg";
-import Person from "./components/Person";
+import CarOne from "./assets/images/car1.jpg";
+import CarTwo from "./assets/images/car2.jpg";
+import CarThree from "./assets/images/car3.jpg";
+import CarFour from "./assets/images/car4.jpg";
+import CarFive from "./assets/images/car5.jpg";
+import Cars from "./components/Cars";
 
 function App() {
 	const profileData = [
@@ -39,50 +44,108 @@ function App() {
 		},
 	];
 
-	const personData = [
+	const carData = [
 		{
 			id: 1,
-			name: "Jeff Bezos",
+			image: CarOne,
+			name: "Audi",
+
+		},
+		 {
+			id: 2,
+			image: CarTwo,
+			name: "Toyota",
+
+		},
+		 {
+			id: 3,
+			image: CarThree,
+			name: "BMW",
+
+		 },
+	      {
+			id: 4,
+			image: CarFour,
+			name: "Jaguar",
+
+		 },
+		 {
+			id: 5,
+			image: CarFive,
+			name: "Sports",
+
+		},
+
+	 ];
+	  return (
+	   <div className="app">
+			<Navbar />
+		
+			<div className="container">
+				{carData.map((car) => {
+				return(
+				<div key= {car.id }>
+						<Cars cars={car} />
+
+					</div>
+				);
+				})}
+
+			</div>
+		<Footer />
+		</div>
+	 );
+};
+
+
+export default App;
+
+
+
+	/*const personData = [
+		{
+			id: 1,
+			name: "Elon Musk",
 			image: PictureFour,
-			netWorth: 100,
-			country: "America",
-			residence: "America",
+			netWorth : 218 + " Billion",
+			country: "USA",
+			age: 53,
 		},
 		{
 			id: 2,
-			name: "Ben",
+			name: "Jeff Bezoz",
 			image: PictureFive,
-			netWorth: 100,
-			country: "America",
-			residence: "America",
+			netWorth: 215 + " Billion",
+			country: "USA",
+			age: 60,
 		},
 		{
 			id: 3,
-			name: "Elon Musk",
+			name: "Bernard Arnault",
 			image: PictureSix,
-			netWorth: 100,
-			country: "America",
-			residence: "America",
+			netWorth: 199 + " Billion",
+			country: "France",
+			age: 75,
 		},
 		{
 			id: 4,
 			name: "Mark Zukerberg",
 			image: PictureSeven,
-			netWorth: 100,
-			country: "America",
-			residence: "America",
+			netWorth: 179 + " Billion",
+			country: "USA",
+			age: 40,
 		},
 		{
 			id: 5,
 			name: "Larry Elison",
 			image: PictureSeven,
-			netWorth: 100,
-			country: "America",
-			residence: "America",
+			netWorth: 161 + " Billion",
+			country: "USA",
+			age: 51,
 		},
-	];
+	];*/
 
-	return (
+	/*return (
 		<div className="app">
 			<Navbar />
 			<div className="container">
@@ -97,11 +160,10 @@ function App() {
 			</div>
 			<Footer />
 		</div>
-	);
-}
+	);*/
 
-export default App;
 
+	
 // import PictureFour from "./assets/images/guy.jpg";
 // import PictureFive from "./assets/images/ben.jpg";
 // import PictureSix from "./assets/images/elon.jpg";
@@ -168,4 +230,4 @@ export default App;
 // 	);
 // }
 
-// export default App;
+ //export default App;
